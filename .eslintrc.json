@@ -1,6 +1,12 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "next/typescript"
-  ]
+    "next/typescript",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "rules": {
+    "no-unused-vars": "off", // 쓰지 않는 변수 error 발생시키는 설정
+    "@typescript-eslint/no-unused-vars": "warn"
+  }
 }
